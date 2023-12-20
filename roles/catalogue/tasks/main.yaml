@@ -34,12 +34,17 @@
     name: common
     tasks_from: daemon-reload
 
+- name: copy mongo.repo to yum.repos.d/mongo.repo
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo 
+
+- name:  and loading the mongo Schema
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: load-mongo.schema
+
 - name: Enabling and starting {{component}}
   ansible.builtin.import_role:
     name: common
     tasks_from: enable-start
-
-- name: copying mongo.repo and loading the mongo Schema
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: load-mongo.schema
