@@ -6,7 +6,7 @@
 - name: cart set-up
   ansible.builtin.import_role:
     name: common
-    tasks_from: cart-roboshop
+    tasks_from: user-roboshop
 
 - name: app set-up
   ansible.builtin.import_role:
