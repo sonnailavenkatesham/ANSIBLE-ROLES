@@ -3,3 +3,7 @@
     name: '{{component}}'
     enabled: true
     state: started
+- name: daemon-reload {{component}}
+  ansible.builtin.service:
+    name: '{{component}}'
+    state: restarted
