@@ -26,14 +26,14 @@
 
 - name: copying {{component}}.service
   ansible.builtin.copy:
-    src: {{component}}.service
+    src: '{{component}}.service'
     dest: /etc/systemd/system/{{component}}.service
 
 - name: daemon_reload {{component}}
   ansible.builtin.import_role:
     name: common
     tasks_from: daemon-reload
-    
+
 - name: Enabling and starting {{component}}
   ansible.builtin.import_role:
     name: common
