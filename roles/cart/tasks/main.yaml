@@ -26,7 +26,7 @@
 
 - name: coping cart.service
   ansible.builtin.copy:
-    src: cart.service'
+    src: cart.service
     dest: /etc/systemd/system/cart.service
 
 - name: daemon reload
