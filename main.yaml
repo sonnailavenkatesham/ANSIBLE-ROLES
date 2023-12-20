@@ -1,5 +1,10 @@
 - name: installing Roboshop Project
-  hosts: "{{component}}"
+  hosts: "{{ietem}}"
   become: yes
   roles:
-  - "{{component}}"
+  - mongodb
+  - catalogue
+  - user
+  - cart
+  - redis
+  - web
