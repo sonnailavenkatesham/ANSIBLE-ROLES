@@ -23,7 +23,7 @@
   ansible.builtin.unarchive:
     src: https://roboshop-builds.s3.amazonaws.com/web.zip
     dest: /usr/share/nginx/html
-  remote_src: yes
+    remote_src: yes
 
 - name: copy roboshop configuration
   ansible.builtin.copy:
