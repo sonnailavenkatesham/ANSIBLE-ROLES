@@ -1,0 +1,9 @@
+- name: installing nodejs
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: NodeJS
+
+- name: user roboshop setup 
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: user-roboshop
