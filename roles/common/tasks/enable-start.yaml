@@ -1,4 +1,0 @@
-- name: Enable and starting
-  ansible.builtin.service:
-    enabled: true
-    

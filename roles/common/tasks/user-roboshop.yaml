@@ -1,0 +1,10 @@
+- name: check user exists or not
+  ansible.builtin.shell: id roboshop
+  register: user
+  ignore_errors: yes
+
+- name: print user outpul
+  ansible.builtin.debug:
+    msg: "Output: {{user}}"
+
+
